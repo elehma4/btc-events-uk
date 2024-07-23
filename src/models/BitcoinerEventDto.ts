@@ -1,3 +1,4 @@
+// src/models/BitcoinerEventDto.ts
 export type BitcoinerEventDto = {
     name: string;
     description: string;
