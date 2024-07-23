@@ -1,3 +1,4 @@
+// src/services/scraper.ts
 import puppeteer from 'puppeteer';
 import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
 
