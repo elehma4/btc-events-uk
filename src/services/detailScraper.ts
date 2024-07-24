@@ -1,5 +1,6 @@
+// src/services/detailScraper.ts
 import puppeteer from 'puppeteer';
-import { BitcoinerEventDto, BitcoinerEventLocationDto } from '../models/BitcoinerEventDto';
+import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
 
 export async function scrapeEventDetails(events: BitcoinerEventDto[]): Promise<BitcoinerEventDto[]> {
   const browser = await puppeteer.launch({ headless: true });
@@ -12,16 +13,16 @@ export async function scrapeEventDetails(events: BitcoinerEventDto[]): Promise<B
       // Extract relevant details from the event page
       const eventDetails = await page.evaluate(() => {
         const locationName = document.querySelector('.tribe-venue a')?.textContent?.trim() || '';
-        const locationDescription = ''; // Assuming no description is available
+        const locationDescription = '';
         const locationUrl = document.querySelector('.tribe-venue-url a')?.getAttribute('href') || '';
         const streetAddress = document.querySelector('.tribe-street-address')?.textContent?.trim() || '';
         const addressLocality = document.querySelector('.tribe-locality')?.textContent?.trim() || '';
-        const addressRegion = ''; // Not available in the given HTML
+        const addressRegion = '';
         const postalCode = document.querySelector('.tribe-postal-code')?.textContent?.trim() || '';
         const addressCountry = document.querySelector('.tribe-country-name')?.textContent?.trim() || '';
-        let geoLat = 0; // Default value
-        let geoLng = 0; // Default value
-        const telephone = ''; // Assuming no telephone information is available
+        let geoLat = 0;
+        let geoLng = 0;
+        const telephone = '';
 
         const iframeSrc = document.querySelector('.tribe-events-venue-map iframe')?.getAttribute('src') || '';
         const geoMatch = iframeSrc.match(/q=([^&]+)/);
@@ -38,7 +39,7 @@ export async function scrapeEventDetails(events: BitcoinerEventDto[]): Promise<B
         const description = document.querySelector('.tribe-events-single-event-description')?.innerHTML.trim() || '';
         const image = document.querySelector('.tribe-events-event-image img')?.getAttribute('src') || '';
         const startDate = document.querySelector('.tribe-event-date-start')?.getAttribute('title') || '';
-        const endDate = startDate; // Assuming end date is the same as start date unless specified
+        const endDate = startDate;
 
         return {
           name,

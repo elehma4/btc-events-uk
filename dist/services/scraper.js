@@ -17,7 +17,7 @@ async function scrapeBitcoinEvents() {
             const name = eventElement.querySelector('.tribe-events-calendar-list__event-title a')?.textContent?.trim() || '';
             const url = eventElement.querySelector('.tribe-events-calendar-list__event-title a')?.getAttribute('href') || '';
             const startDate = eventElement.querySelector('time')?.getAttribute('datetime') || '';
-            const endDate = startDate; // Assuming end date is the same as start date unless specified
+            const endDate = startDate;
             const description = eventElement.querySelector('.tribe-events-calendar-list__event-description')?.textContent?.trim() || '';
             const image = eventElement.querySelector('.tribe-events-calendar-list__event-image img')?.getAttribute('src') || '';
             // Initialize location with empty fields

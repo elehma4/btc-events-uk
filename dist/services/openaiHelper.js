@@ -4,8 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.completeEventDetails = completeEventDetails;
+// src/services/openaiHelper.ts
 const openai_1 = __importDefault(require("openai"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const cleanEventData_1 = require("../utils/cleanEventData");
 dotenv_1.default.config();
 const openai = new openai_1.default({
     apiKey: process.env.OPENAI_API_KEY,
@@ -14,34 +16,34 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 async function completeEventDetails(event) {
     await delay(2000); // 2-second delay to avoid rate limits
     const prompt = `
-  Given the following event details, fill in any missing information:
+  Given the following event details, fill in any missing information. Ensure no important details are lost. If any information is incorrect or nonsensical, set the value to an empty string. Use the specific URL format 'bitcoinevents.uk/event/[event-name]' for the event URL. Do not use Google URLs.
 
   Name: ${event.name}
   Description: ${event.description}
-  Image: ${event.image || "N/A"}
-  URL: ${event.url}
-  Start Date: ${event.startDate}
-  End Date: ${event.endDate}
+  Image: ${event.image || ""}
+  URL: ${event.url || ""}
+  Start Date: ${event.startDate || ""}
+  End Date: ${event.endDate || ""}
   Location:
-    Name: ${event.location.name}
-    Description: ${event.location.description}
-    URL: ${event.location.url}
+    Name: ${event.location.name || ""}
+    Description: ${event.location.description || ""}
+    URL: ${event.location.url || ""}
     Address:
-      Street Address: ${event.location.address.streetAddress}
-      Address Locality: ${event.location.address.addressLocality}
-      Address Region: ${event.location.address.addressRegion}
-      Postal Code: ${event.location.address.postalCode}
-      Address Country: ${event.location.address.addressCountry}
+      Street Address: ${event.location.address.streetAddress || ""}
+      Address Locality: ${event.location.address.addressLocality || ""}
+      Address Region: ${event.location.address.addressRegion || ""}
+      Postal Code: ${event.location.address.postalCode || ""}
+      Address Country: ${event.location.address.addressCountry || ""}
     Geo:
-      Latitude: ${event.location.geo.latitude}
-      Longitude: ${event.location.geo.longitude}
-    Telephone: ${event.location.telephone}
+      Latitude: ${event.location.geo?.latitude || ""}
+      Longitude: ${event.location.geo?.longitude || ""}
+    Telephone: ${event.location.telephone || ""}
   `;
     const response = await openai.chat.completions.create({
         messages: [
             {
                 role: 'system',
-                content: 'You are an assistant that specializes in completing event details based on partial information provided.'
+                content: 'You are an assistant that specializes in completing event details based on partial information provided. The data will be used in a Bitcoiner events application (OrangePillApp). If any provided information is nonsensical or incorrect, replace it with an empty string.'
             },
             {
                 role: 'user',
@@ -63,55 +65,64 @@ async function completeEventDetails(event) {
             const valueStr = value.join(':').trim();
             switch (key.toLowerCase()) {
                 case 'name':
-                    event.name = valueStr;
+                    event.name = valueStr || event.name;
                     break;
                 case 'description':
-                    event.description = valueStr;
+                    event.description = (0, cleanEventData_1.stripHtmlTags)(valueStr) || event.description;
                     break;
                 case 'image':
-                    event.image = valueStr !== "N/A" ? valueStr : event.image;
+                    event.image = valueStr !== "" ? valueStr : event.image;
                     break;
                 case 'url':
-                    event.url = valueStr;
+                    if (valueStr.includes('google.com') || !valueStr) {
+                        event.url = `https://bitcoinevents.uk/event/${event.name.toLowerCase().replace(/ /g, '-')}`;
+                    }
+                    else {
+                        event.url = valueStr;
+                    }
                     break;
                 case 'start date':
-                    event.startDate = valueStr;
+                    event.startDate = (0, cleanEventData_1.isValidDate)(valueStr) ? valueStr : event.startDate;
                     break;
                 case 'end date':
-                    event.endDate = valueStr;
+                    event.endDate = (0, cleanEventData_1.isValidDate)(valueStr) ? valueStr : event.endDate;
                     break;
                 case 'location name':
-                    event.location.name = valueStr;
+                    event.location.name = valueStr || event.location.name;
                     break;
                 case 'location description':
-                    event.location.description = valueStr;
+                    event.location.description = valueStr || event.location.description;
                     break;
                 case 'location url':
-                    event.location.url = valueStr;
+                    if (!event.url || !event.url.includes('bitcoinevents.uk')) {
+                        event.location.url = valueStr.includes('google.com') ? '' : valueStr || event.location.url;
+                    }
                     break;
                 case 'street address':
-                    event.location.address.streetAddress = valueStr;
+                    event.location.address.streetAddress = valueStr.includes('Specific street address') ? '' : valueStr || event.location.address.streetAddress;
                     break;
                 case 'address locality':
-                    event.location.address.addressLocality = valueStr;
+                    event.location.address.addressLocality = valueStr || event.location.address.addressLocality;
                     break;
                 case 'address region':
-                    event.location.address.addressRegion = valueStr;
+                    event.location.address.addressRegion = valueStr || event.location.address.addressRegion;
                     break;
                 case 'postal code':
-                    event.location.address.postalCode = valueStr;
+                    event.location.address.postalCode = valueStr || event.location.address.postalCode;
                     break;
                 case 'address country':
-                    event.location.address.addressCountry = valueStr;
+                    event.location.address.addressCountry = valueStr || event.location.address.addressCountry;
                     break;
                 case 'latitude':
-                    event.location.geo.latitude = parseFloat(valueStr);
+                    event.location.geo = event.location.geo || {};
+                    event.location.geo.latitude = parseFloat(valueStr) || event.location.geo.latitude;
                     break;
                 case 'longitude':
-                    event.location.geo.longitude = parseFloat(valueStr);
+                    event.location.geo = event.location.geo || {};
+                    event.location.geo.longitude = parseFloat(valueStr) || event.location.geo.longitude;
                     break;
                 case 'telephone':
-                    event.location.telephone = valueStr;
+                    event.location.telephone = valueStr || event.location.telephone;
                     break;
             }
         });

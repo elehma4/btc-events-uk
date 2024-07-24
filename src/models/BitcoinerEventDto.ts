@@ -3,30 +3,30 @@ export type BitcoinerEventDto = {
     name: string;
     description: string;
     image?: string;
-    url: string;
-    startDate: string;
-    endDate: string;
+    url?: string;
+    startDate?: string;
+    endDate?: string;
     location: BitcoinerEventLocationDto;
 };
 
 export type BitcoinerEventLocationDto = {
     name: string;
     description: string;
-    url: string;
+    url?: string;
     address: BitcoinerEventAddressDto;
-    geo: BitcoinerEventGeoDto;
-    telephone: string;
+    geo?: BitcoinerEventGeoDto;
+    telephone?: string;
 };
 
 export type BitcoinerEventGeoDto = {
-    latitude: number;
-    longitude: number;
+    latitude?: number | string;
+    longitude?: number | string;
 };
 
 export type BitcoinerEventAddressDto = {
-    streetAddress: string;
+    streetAddress?: string;
     addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
+    addressRegion?: string;
+    postalCode?: string;
     addressCountry: string;
 };

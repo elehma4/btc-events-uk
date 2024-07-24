@@ -26,12 +26,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const scraper_1 = require("./services/scraper");
 const detailScraper_1 = require("./services/detailScraper");
 const openaiHelper_1 = require("./services/openaiHelper");
+const cleanEventData_1 = require("./utils/cleanEventData");
 const logger_1 = require("./utils/logger");
 const fs = __importStar(require("fs"));
 async function main() {
     try {
         // Step 1: Scrape the original URL for general information
         let events = await (0, scraper_1.scrapeBitcoinEvents)();
+        console.log("Events at Step 1: ", events);
         (0, logger_1.log)('Step 1: General information scraping completed.');
         for (let i = 0; i < events.length; i++) {
             // Step 2: Scrape the specific event URL for detailed information
@@ -42,6 +44,10 @@ async function main() {
             events[i] = await (0, openaiHelper_1.completeEventDetails)(events[i]);
             (0, logger_1.log)(`Step 3: Completing missing event details using OpenAI API completed for event: ${events[i].name}`);
         }
+        console.log("events before clean up:", events);
+        // Step 4: Clean up final event data
+        events = (0, cleanEventData_1.cleanEventData)(events);
+        console.log("events after clean up:", events);
         // Save the final result to a JSON file
         const outputPath = './events.json';
         fs.writeFileSync(outputPath, JSON.stringify(events, null, 2));
