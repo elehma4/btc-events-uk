@@ -54,6 +54,12 @@ This project is designed to scrape and gather detailed information about Bitcoin
    - Use OpenAI to fill in any missing information for the event details.
    - Update the DTO (Data Transfer Object) for each event with the completed information.
 
+4. **Cleaning Up Event Data**:
+   - Remove invalid placeholders for URLs, dates, addresses, and geo data.
+   - Ensure that fields are left missing if data is not available.
+   - Validate and clean data for proper formatting.
+   - Strip HTML entities and tags from descriptions.
+
 ## Key Files and Their Functions
 
 1. **src/index.ts**:
@@ -70,6 +76,9 @@ This project is designed to scrape and gather detailed information about Bitcoin
 4. **services/openaiHelper.ts**:
    - Uses OpenAI API to complete any missing event details.
 
+5. **utils/cleanEventData.ts**:
+   - Cleans up the final event data by removing invalid placeholders and ensuring proper formatting.
+
 ## Example Output
 
 The final output for each event includes all the required information such as name, description, image, URL, dates, and detailed location information including geographical coordinates. Here is an example of the output:
@@ -81,8 +90,8 @@ The final output for each event includes all the required information such as na
     "description": "Carlton Town Football Club is a community-based football club located in Gedling. Known for its welcoming atmosphere and active local involvement, it serves as a venue for various local events including sports and meetings.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2023/01/3-favicon-512x512-1-e1675457255113.png?fit=300%2C300&ssl=1",
     "url": "https://www.carltontownfc.co.uk",
-    "startDate": "Wednesday 24th July 2023",
-    "endDate": "Wednesday 24th July 2023",
+    "startDate": "2024-07-24T18:30:00",
+    "endDate": "2024-07-24T21:00:00",
     "location": {
       "name": "Carlton Town Football Club",
       "description": "",
@@ -98,7 +107,7 @@ The final output for each event includes all the required information such as na
         "latitude": 52.9814,
         "longitude": -1.0876
       },
-      "telephone": "+44 XXXX XXXXXX (exact number would need to be verified from official sources)"
+      "telephone": ""
     }
   },
   ...
