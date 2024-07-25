@@ -76,7 +76,7 @@ export async function completeEventDetails(event: BitcoinerEventDto): Promise<Bi
           break;
         case 'url':
           if (valueStr.includes('google.com') || !valueStr) {
-            const formattedName = event.name.toLowerCase().replace(/[\s–]+/g, '-');
+            const formattedName = event.name.toLowerCase().replace(/[\s&–]+/g, '-');
             const formattedDate = event.startDate.split('T')[0];
             event.url = `https://bitcoinevents.uk/event/${formattedName}/${formattedDate}`;
           } else {

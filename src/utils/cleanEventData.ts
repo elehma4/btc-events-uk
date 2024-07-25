@@ -4,7 +4,7 @@ import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
 export function cleanEventData(events: BitcoinerEventDto[]): BitcoinerEventDto[] {
   return events.map(event => {
     if (!event.url || event.url.includes('Insert URL') || event.url.includes('not provided')) {
-      const formattedName = event.name.toLowerCase().replace(/[\s–]+/g, '-');
+      const formattedName = event.name.toLowerCase().replace(/[\s&–]+/g, '-');
       const formattedDate = event.startDate.split('T')[0];
       event.url = `https://bitcoinevents.uk/event/${formattedName}/${formattedDate}`;
     }

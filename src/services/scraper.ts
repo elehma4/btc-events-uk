@@ -38,7 +38,7 @@ export async function scrapeBitcoinEvents(): Promise<BitcoinerEventDto[]> {
         telephone: ''
       };
 
-      const formattedName = name.toLowerCase().replace(/[\s–]+/g, '-');
+      const formattedName = name.toLowerCase().replace(/[\s&–]+/g, '-');
       const formattedDate = startDate.split('T')[0];
       const finalUrl = url ? url : `https://bitcoinevents.uk/event/${formattedName}/${formattedDate}`;
 
