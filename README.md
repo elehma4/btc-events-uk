@@ -86,26 +86,26 @@ The final output for each event includes all the required information such as na
 ```json
 [
   {
-    "name": "Carlton Town Football Club",
-    "description": "Carlton Town Football Club is a community-based football club located in Gedling. Known for its welcoming atmosphere and active local involvement, it serves as a venue for various local events including sports and meetings.",
-    "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2023/01/3-favicon-512x512-1-e1675457255113.png?fit=300%2C300&ssl=1",
-    "url": "https://www.carltontownfc.co.uk",
-    "startDate": "2024-07-24T18:30:00",
-    "endDate": "2024-07-24T21:00:00",
+    "name": "Bitcoin Walk – Edinburgh",
+    "description": "Join the Bitcoin community for a lively walk around Arthur’s Seat every Saturday at 12 PM, where discussions are centered around Bitcoin.",
+    "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/08/img_3490-e1710667635321.jpg?fit=300%2C300&ssl=1",
+    "url": "https://bitcoinwalk.org",
+    "startDate": "2024-08-03T12:00",
+    "endDate": "2024-08-03",
     "location": {
-      "name": "Carlton Town Football Club",
+      "name": "Arthur’s Seat",
       "description": "",
-      "url": "https://www.carltontownfc.co.uk",
+      "url": "https://bitcoinwalk.org",
       "address": {
-        "streetAddress": "Stoke Lane",
-        "addressLocality": "Gedling",
-        "addressRegion": "Nottinghamshire",
-        "postalCode": "NG4 2QS",
+        "streetAddress": "",
+        "addressLocality": "Edinburgh",
+        "addressRegion": "",
+        "postalCode": "EH8 8AZ",
         "addressCountry": "United Kingdom"
       },
       "geo": {
-        "latitude": 52.9814,
-        "longitude": -1.0876
+        "latitude": 55.944083,
+        "longitude": -3.161833
       },
       "telephone": ""
     }
