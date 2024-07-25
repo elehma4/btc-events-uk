@@ -16,7 +16,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 async function completeEventDetails(event) {
     await delay(2000); // 2-second delay to avoid rate limits
     const prompt = `
-  Given the following event details, fill in any missing information. Ensure no important details are lost. Do not change the event name to the location name. If any information is incorrect or nonsensical, set the value to an empty string. Use the specific URL format 'bitcoinevents.uk/event/[event-name]' for the event URL. Do not use Google URLs (google.com). A good date/time object will look like this 2024-07-31T14:00, or 2024-07-31.
+  Given the following event details, fill in any missing information. Ensure no important details are lost. Do not change the event name to the location name. If any information is incorrect or nonsensical, set the value to an empty string. Use the specific URL format 'bitcoinevents.uk/event/[event-name]/[event-date]' for the event URL. Do not use Google URLs (google.com). Dates should be in the format 'YYYY-MM-DD'. If time is provided, use 'YYYY-MM-DDTHH:MM'. If only the start time is provided, format the end date as 'YYYY-MM-DD'. 
 
   Name: ${event.name}
   Description: ${event.description}

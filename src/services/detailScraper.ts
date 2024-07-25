@@ -81,6 +81,10 @@ export async function scrapeEventDetails(events: BitcoinerEventDto[]): Promise<B
         eventDetails.endDate = event.endDate;
       }
 
+      if (eventDetails.location.url.includes('google.com')) {
+        eventDetails.location.url = '';
+      }
+
       // Assign the extracted details to the event
       Object.assign(event, eventDetails);
 

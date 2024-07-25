@@ -1,9 +1,9 @@
 [
   {
     "name": "Manchester Bitcoin",
-    "description": "\"\"",
+    "description": "Bitcoin Manchester welcomes all individuals and businesses with an interest in Bitcoin or related technologies. Through events and support, they strive to promote Bitcoin in Manchester, educate public, private, and government stakeholders about the advantages and risks of Bitcoin and associated technologies, and become a reliable and valuable resource for the local Bitcoin community.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/03/img_8250-1-e1711276291933.jpg?fit=300%2C300&ssl=1",
-    "url": "\"\"",
+    "url": "https://bitcoinevents.uk/event/manchester-bitcoin/2024-07-25",
     "startDate": "2024-07-25",
     "endDate": "2024-07-25",
     "location": {
@@ -13,7 +13,7 @@
       "address": {
         "streetAddress": "37 Swan Street",
         "addressLocality": "Manchester",
-        "addressRegion": "\"\"",
+        "addressRegion": "",
         "postalCode": "M4 5JZ",
         "addressCountry": "United Kingdom"
       },
@@ -21,22 +21,22 @@
         "latitude": 0,
         "longitude": 0
       },
-      "telephone": "\"\""
+      "telephone": ""
     }
   },
   {
     "name": "The Satoshi Society – Southampton",
-    "description": "A relaxed and friendly venue located in the scenic area of Ocean Village, perfect for social gatherings and events.",
+    "description": "Next Bitcoin meetup in Southampton. Friday 26th July, from 6pm. Maritimo Lounge, Ocean Village.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/07/img_9587-1-e1720605035866.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/the-satoshi-society-southampton/2024-07-26",
     "startDate": "2024-07-26T18:00",
-    "endDate": "2024-07-26T21:00",
+    "endDate": "2024-07-26",
     "location": {
       "name": "Maritimo Lounge",
       "description": "",
       "url": "",
       "address": {
-        "streetAddress": "Ocean Village",
+        "streetAddress": "",
         "addressLocality": "Southampton",
         "addressRegion": "",
         "postalCode": "",
@@ -51,45 +51,20 @@
   },
   {
     "name": "Bitcoin Walk – Edinburgh",
-    "description": "A notable landmark in Holyrood Park, offering panoramic views of Edinburgh, often used for public events and gatherings.",
+    "description": "A prominent hill in Edinburgh, offering scenic views and a traditional spot for local gatherings.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/08/img_3490-e1710667635321.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinwalk.org",
     "startDate": "2024-07-27T12:00",
-    "endDate": "2024-07-27T14:00",
+    "endDate": "2024-07-27",
     "location": {
       "name": "Arthur’s Seat",
       "description": "",
       "url": "https://bitcoinwalk.org",
       "address": {
-        "streetAddress": "Queen's Drive",
+        "streetAddress": "",
         "addressLocality": "Edinburgh",
         "addressRegion": "",
-        "postalCode": "EH8 8HG",
-        "addressCountry": "United Kingdom"
-      },
-      "geo": {
-        "latitude": 55.944083,
-        "longitude": -3.161833
-      },
-      "telephone": ""
-    }
-  },
-  {
-    "name": "Plymouth Bitcoiners",
-    "description": "A cozy and inviting cafe known for its excellent coffee and vibrant atmosphere.",
-    "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/01/img_7729-1-e1711275072681.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bostonteaparty.co.uk/our_cafes/plymouth.php",
-    "startDate": "2024-07-27T00:00",
-    "endDate": "2024-07-27T23:59",
-    "location": {
-      "name": "Boston Tea Party",
-      "description": "",
-      "url": "https://bostonteaparty.co.uk/our_cafes/plymouth.php",
-      "address": {
-        "streetAddress": "82-84 Vauxhall Street",
-        "addressLocality": "Plymouth",
-        "addressRegion": "",
-        "postalCode": "PL4 0EX",
+        "postalCode": "EH153PY",
         "addressCountry": "United Kingdom"
       },
       "geo": {
@@ -100,8 +75,33 @@
     }
   },
   {
+    "name": "Plymouth Bitcoiners",
+    "description": "\"\"",
+    "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/01/img_7729-1-e1711275072681.jpg?fit=300%2C300&ssl=1",
+    "url": "\"\"",
+    "startDate": "2024-07-27",
+    "endDate": "2024-07-27",
+    "location": {
+      "name": "Boston Tea Party",
+      "description": "",
+      "url": "https://bostonteaparty.co.uk/our_cafes/plymouth.php",
+      "address": {
+        "streetAddress": "82-84 Vauxhall Street",
+        "addressLocality": "Plymouth",
+        "addressRegion": "\"\"",
+        "postalCode": "PL4 0EX",
+        "addressCountry": "United Kingdom"
+      },
+      "geo": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "telephone": "\"\""
+    }
+  },
+  {
     "name": "Bitcoin East",
-    "description": "A cozy venue for community gatherings and events.",
+    "description": "The next Bitcoin East meetup will be Sunday 28th July at Procopio’s Pantry, Bury St Edmunds from 11 am. A walk in Abbey Gardens afterwards. 🌞🪴🧡",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/03/img_8224-1-e1710668924320.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/bitcoin-east/2024-07-28",
     "startDate": "2024-07-28T11:00",
@@ -113,7 +113,7 @@
       "address": {
         "streetAddress": "17 Langton Place",
         "addressLocality": "Bury St Edmunds",
-        "addressRegion": "Suffolk",
+        "addressRegion": "",
         "postalCode": "IP33 1NE",
         "addressCountry": "United Kingdom"
       },
@@ -126,11 +126,11 @@
   },
   {
     "name": "Bitcoin & Beers – Gloucestershire",
-    "description": "A modern coworking space that hosts various events.",
+    "description": "Come hang out with fellow Bitcoin enthusiasts and learn how to make a real-time purchase with bitcoin. Bitcoin and Beer are provided.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2023/03/img_4936-e1721244432851.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/bitcoin-beers-gloucestershire/2024-07-30",
     "startDate": "2024-07-30T00:00",
-    "endDate": "2024-07-30T23:59",
+    "endDate": "2024-07-30",
     "location": {
       "name": "Formal House",
       "description": "",
@@ -138,20 +138,20 @@
       "address": {
         "streetAddress": "60 Saint George's Place",
         "addressLocality": "Cheltenham",
-        "addressRegion": "Gloucestershire",
+        "addressRegion": "",
         "postalCode": "GL50 3PN",
-        "addressCountry": "UK"
+        "addressCountry": ""
       },
       "geo": {
-        "latitude": 51.8975,
-        "longitude": -2.0799
+        "latitude": 0,
+        "longitude": 0
       },
       "telephone": ""
     }
   },
   {
     "name": "Canterbury Bitcoin",
-    "description": "A cozy and welcoming pub located in the heart of Canterbury, ideal for social gatherings and community meetups.",
+    "description": "A cozy and welcoming venue for gatherings and events.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/06/logo-bitcoin-512-e1719514063960.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/canterbury-bitcoin/2024-07-30",
     "startDate": "2024-07-30T19:00",
@@ -178,9 +178,9 @@
     "name": "Leamington Spa Bitcoin",
     "description": "Bitcoin meetup on the last Tuesday of the month. 19:00 in Leamington Spa, Warwickshire.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/06/img_2870-e1711271849172.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bitcoinevents.uk/event/leamington-spa-bitcoin/2024-07-30",
+    "url": "https://bitcoinevents.uk/leamingtonspa/",
     "startDate": "2024-07-30T19:00",
-    "endDate": "2024-07-30T21:00",
+    "endDate": "2024-07-30",
     "location": {
       "name": "The White Horse",
       "description": "",
@@ -205,7 +205,7 @@
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/07/logo-e1720030121302.webp?fit=533%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/bitdevs-london/2024-07-31",
     "startDate": "2024-07-31T19:00",
-    "endDate": "2024-07-31T21:00",
+    "endDate": "2024-07-31",
     "location": {
       "name": "Westminster",
       "description": "",
@@ -229,8 +229,8 @@
     "description": "Building a bitcoin community in the Brighton & Hove area. A regular informal meetup happens every Last Wednesday of the month. More activities to be announced in the coming months.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/09/img_3540-e1710665517549.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/brighton-bitcoin/2024-07-31",
-    "startDate": "2024-07-31T00:00",
-    "endDate": "2024-07-31T23:59",
+    "startDate": "2024-07-31",
+    "endDate": "2024-07-31",
     "location": {
       "name": "Caxton Arms",
       "description": "",
@@ -240,7 +240,7 @@
         "addressLocality": "Brighton",
         "addressRegion": "",
         "postalCode": "BN1 3LB",
-        "addressCountry": "United Kingdom"
+        "addressCountry": ""
       },
       "geo": {
         "latitude": 0,
@@ -251,11 +251,11 @@
   },
   {
     "name": "Lincolnshire Bitcoin",
-    "description": "A traditional pub located in the heart of Lincoln.",
+    "description": "Lincolnshire Bitcoin meets on the first Thursday of each month at 7:30 PM in the Treaty of Commerce, Lincoln, LN5 7AF.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/04/img_8359-1-e1712690481714.jpg?fit=300%2C300&ssl=1",
     "url": "https://www1.camra.org.uk/pubs/treaty-of-commerce-lincoln-191763",
     "startDate": "2024-08-01T19:30",
-    "endDate": "2024-08-01T22:00",
+    "endDate": "2024-08-01",
     "location": {
       "name": "Treaty of Commerce",
       "description": "",
@@ -276,20 +276,20 @@
   },
   {
     "name": "Bitcoin Walk – Edinburgh",
-    "description": "A prominent hill in Holyrood Park, with sweeping views of Edinburgh, popular for hiking and outdoor activities.",
+    "description": "Every Saturday, Bitcoin Walk Edinburgh meets to trek around Arthur’s Seat and discuss Bitcoin topics.Join them this week at 12 pm.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/08/img_3490-e1710667635321.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bitcoinevents.uk/event/bitcoin-walk-edinburgh/2024-08-03",
+    "url": "https://bitcoinwalk.org",
     "startDate": "2024-08-03T12:00",
-    "endDate": "2024-08-03T14:00",
+    "endDate": "2024-08-03",
     "location": {
       "name": "Arthur’s Seat",
       "description": "",
       "url": "https://bitcoinwalk.org",
       "address": {
-        "streetAddress": "Queen’s Drive",
+        "streetAddress": "",
         "addressLocality": "Edinburgh",
         "addressRegion": "",
-        "postalCode": "EH8 8HG",
+        "postalCode": "EH153PY",
         "addressCountry": "United Kingdom"
       },
       "geo": {
