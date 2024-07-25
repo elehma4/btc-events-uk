@@ -13,22 +13,22 @@ async function main() {
     log('Step 1: General information scraping completed.');
 
     for (let i = 0; i < events.length; i++) {
+      console.log(`Event before Step 2: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
+
       // Step 2: Scrape the specific event URL for detailed information
       let detailedEvent = await scrapeEventDetails([events[i]]);
       events[i] = detailedEvent[0];
+      console.log(`Event after Step 2: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
       log(`Step 2: Detailed information scraping completed for event: ${events[i].name}`);
 
       // Step 3: Use OpenAI API to fill in any missing information
       events[i] = await completeEventDetails(events[i]);
+      console.log(`Event after Step 3: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
       log(`Step 3: Completing missing event details using OpenAI API completed for event: ${events[i].name}`);
     }
 
-    console.log("events before clean up:", events);
-
     // Step 4: Clean up final event data
     events = cleanEventData(events);
-
-    console.log("events after clean up:", events);
 
     // Save the final result to a JSON file
     const outputPath = './events.json';

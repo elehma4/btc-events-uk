@@ -2,7 +2,7 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
-import { stripHtmlTags, isValidDate } from '../utils/cleanEventData';
+import { stripHtmlTags, isValidDate, cleanDate } from '../utils/cleanEventData';
 
 dotenv.config();
 
@@ -20,24 +20,24 @@ export async function completeEventDetails(event: BitcoinerEventDto): Promise<Bi
 
   Name: ${event.name}
   Description: ${event.description}
-  Image: ${event.image || ""}
-  URL: ${event.url || ""}
-  Start Date: ${event.startDate || ""}
-  End Date: ${event.endDate || ""}
+  Image: ${event.image}
+  URL: ${event.url}
+  Start Date: ${event.startDate}
+  End Date: ${event.endDate}
   Location:
-    Name: ${event.location.name || ""}
-    Description: ${event.location.description || ""}
-    URL: ${event.location.url || ""}
+    Name: ${event.location.name}
+    Description: ${event.location.description}
+    URL: ${event.location.url}
     Address:
-      Street Address: ${event.location.address.streetAddress || ""}
-      Address Locality: ${event.location.address.addressLocality || ""}
-      Address Region: ${event.location.address.addressRegion || ""}
-      Postal Code: ${event.location.address.postalCode || ""}
-      Address Country: ${event.location.address.addressCountry || ""}
+      Street Address: ${event.location.address.streetAddress}
+      Address Locality: ${event.location.address.addressLocality}
+      Address Region: ${event.location.address.addressRegion}
+      Postal Code: ${event.location.address.postalCode}
+      Address Country: ${event.location.address.addressCountry}
     Geo:
-      Latitude: ${event.location.geo?.latitude || ""}
-      Longitude: ${event.location.geo?.longitude || ""}
-    Telephone: ${event.location.telephone || ""}
+      Latitude: ${event.location.geo?.latitude}
+      Longitude: ${event.location.geo?.longitude}
+    Telephone: ${event.location.telephone}
   `;
 
   const response = await openai.chat.completions.create({
@@ -85,10 +85,10 @@ export async function completeEventDetails(event: BitcoinerEventDto): Promise<Bi
           }
           break;
         case 'start date':
-          event.startDate = isValidDate(valueStr) ? valueStr : event.startDate;
+          event.startDate = isValidDate(cleanDate(valueStr)) ? cleanDate(valueStr) : event.startDate;
           break;
         case 'end date':
-          event.endDate = isValidDate(valueStr) ? valueStr : event.endDate;
+          event.endDate = isValidDate(cleanDate(valueStr)) ? cleanDate(valueStr) : event.endDate;
           break;
         case 'location name':
           event.location.name = valueStr || event.location.name;

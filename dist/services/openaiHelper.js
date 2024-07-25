@@ -20,24 +20,24 @@ async function completeEventDetails(event) {
 
   Name: ${event.name}
   Description: ${event.description}
-  Image: ${event.image || ""}
-  URL: ${event.url || ""}
-  Start Date: ${event.startDate || ""}
-  End Date: ${event.endDate || ""}
+  Image: ${event.image}
+  URL: ${event.url}
+  Start Date: ${event.startDate}
+  End Date: ${event.endDate}
   Location:
-    Name: ${event.location.name || ""}
-    Description: ${event.location.description || ""}
-    URL: ${event.location.url || ""}
+    Name: ${event.location.name}
+    Description: ${event.location.description}
+    URL: ${event.location.url}
     Address:
-      Street Address: ${event.location.address.streetAddress || ""}
-      Address Locality: ${event.location.address.addressLocality || ""}
-      Address Region: ${event.location.address.addressRegion || ""}
-      Postal Code: ${event.location.address.postalCode || ""}
-      Address Country: ${event.location.address.addressCountry || ""}
+      Street Address: ${event.location.address.streetAddress}
+      Address Locality: ${event.location.address.addressLocality}
+      Address Region: ${event.location.address.addressRegion}
+      Postal Code: ${event.location.address.postalCode}
+      Address Country: ${event.location.address.addressCountry}
     Geo:
-      Latitude: ${event.location.geo?.latitude || ""}
-      Longitude: ${event.location.geo?.longitude || ""}
-    Telephone: ${event.location.telephone || ""}
+      Latitude: ${event.location.geo?.latitude}
+      Longitude: ${event.location.geo?.longitude}
+    Telephone: ${event.location.telephone}
   `;
     const response = await openai.chat.completions.create({
         messages: [
@@ -82,10 +82,10 @@ async function completeEventDetails(event) {
                     }
                     break;
                 case 'start date':
-                    event.startDate = (0, cleanEventData_1.isValidDate)(valueStr) ? valueStr : event.startDate;
+                    event.startDate = (0, cleanEventData_1.isValidDate)((0, cleanEventData_1.cleanDate)(valueStr)) ? (0, cleanEventData_1.cleanDate)(valueStr) : event.startDate;
                     break;
                 case 'end date':
-                    event.endDate = (0, cleanEventData_1.isValidDate)(valueStr) ? valueStr : event.endDate;
+                    event.endDate = (0, cleanEventData_1.isValidDate)((0, cleanEventData_1.cleanDate)(valueStr)) ? (0, cleanEventData_1.cleanDate)(valueStr) : event.endDate;
                     break;
                 case 'location name':
                     event.location.name = valueStr || event.location.name;

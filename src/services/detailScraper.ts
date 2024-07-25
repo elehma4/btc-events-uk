@@ -68,8 +68,23 @@ export async function scrapeEventDetails(events: BitcoinerEventDto[]): Promise<B
         } as BitcoinerEventDto;
       });
 
+      // Ensure that dates are not overwritten if they are already set
+      if (eventDetails.startDate && eventDetails.startDate !== '') {
+        event.startDate = eventDetails.startDate;
+      } else {
+        eventDetails.startDate = event.startDate;
+      }
+      
+      if (eventDetails.endDate && eventDetails.endDate !== '') {
+        event.endDate = eventDetails.endDate;
+      } else {
+        eventDetails.endDate = event.endDate;
+      }
+
       // Assign the extracted details to the event
       Object.assign(event, eventDetails);
+
+      console.log(`Event after Step 2: ${event.name}, Start Date: ${event.startDate}, End Date: ${event.endDate}`);
     }
   }
 
