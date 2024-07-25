@@ -78,6 +78,9 @@ async function scrapeEventDetails(events) {
             else {
                 eventDetails.endDate = event.endDate;
             }
+            if (eventDetails.location.url.includes('google.com')) {
+                eventDetails.location.url = '';
+            }
             // Assign the extracted details to the event
             Object.assign(event, eventDetails);
             console.log(`Event after Step 2: ${event.name}, Start Date: ${event.startDate}, End Date: ${event.endDate}`);
