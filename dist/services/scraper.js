@@ -38,7 +38,10 @@ async function scrapeBitcoinEvents() {
                 },
                 telephone: ''
             };
-            eventList.push({ name, description, image, url, startDate, endDate, location });
+            const formattedName = name.toLowerCase().replace(/[\s–]+/g, '-');
+            const formattedDate = startDate.split('T')[0];
+            const finalUrl = url ? url : `https://bitcoinevents.uk/event/${formattedName}/${formattedDate}`;
+            eventList.push({ name, description, image, url: finalUrl, startDate, endDate, location });
         });
         return eventList;
     });
