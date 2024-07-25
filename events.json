@@ -1,11 +1,11 @@
 [
   {
     "name": "The Smithfield Market Tavern",
-    "description": "\"\"",
+    "description": "Bitcoin Manchester welcomes all individuals and businesses with an interest in Bitcoin or related technologies. Through events and support, they strive to promote Bitcoin in Manchester, educate public, private, and government stakeholders about the advantages and risks of Bitcoin and associated technologies, and become a reliable and valuable resource for the local Bitcoin community.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/03/img_8250-1-e1711276291933.jpg?fit=300%2C300&ssl=1",
-    "url": "\"\"",
-    "startDate": "2024-07-25",
-    "endDate": "2024-07-25",
+    "url": "https://bitcoinevents.uk/event/the-smithfield-market-tavern",
+    "startDate": "2024-07-25T00:00",
+    "endDate": "2024-07-25T23:59",
     "location": {
       "name": "The Smithfield Market Tavern",
       "description": "",
@@ -13,7 +13,7 @@
       "address": {
         "streetAddress": "37 Swan Street",
         "addressLocality": "Manchester",
-        "addressRegion": "\"\"",
+        "addressRegion": "",
         "postalCode": "M4 5JZ",
         "addressCountry": "United Kingdom"
       },
@@ -21,12 +21,12 @@
         "latitude": 0,
         "longitude": 0
       },
-      "telephone": "\"\""
+      "telephone": ""
     }
   },
   {
     "name": "Maritimo Lounge",
-    "description": "Next Bitcoin meetup in Southampton. Join us on Friday, July 26th at the Maritimo Lounge in Ocean Village, starting from 6 PM.",
+    "description": "Next Bitcoin meetup in Southampton. Join us on Friday, 26th July, from 6pm at Maritimo Lounge, Ocean Village.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/07/img_9587-1-e1720605035866.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/maritimo-lounge",
     "startDate": "2024-07-26T18:00",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Arthur’s Seat",
-    "description": "Join the weekly trek around Arthur’s Seat in Edinburgh to discuss Bitcoin every Saturday at 12 pm.",
+    "description": "Every Saturday, join the Bitcoin Walk in Edinburgh for a trek around Arthur’s Seat while discussing Bitcoin.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/08/img_3490-e1710667635321.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/arthur’s-seat",
     "startDate": "2024-07-27T12:00",
@@ -64,7 +64,7 @@
         "streetAddress": "",
         "addressLocality": "Edinburgh",
         "addressRegion": "",
-        "postalCode": "EH153PY",
+        "postalCode": "EH8 8AZ",
         "addressCountry": "United Kingdom"
       },
       "geo": {
@@ -88,7 +88,7 @@
       "address": {
         "streetAddress": "82-84 Vauxhall Street",
         "addressLocality": "Plymouth",
-        "addressRegion": "",
+        "addressRegion": "\"\"",
         "postalCode": "PL4 0EX",
         "addressCountry": "United Kingdom"
       },
@@ -96,7 +96,7 @@
         "latitude": 0,
         "longitude": 0
       },
-      "telephone": ""
+      "telephone": "\"\""
     }
   },
   {
@@ -126,34 +126,34 @@
   },
   {
     "name": "Formal House",
-    "description": "A prominent venue hosting various events located in Cheltenham.",
+    "description": "\"\"",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2023/03/img_4936-e1721244432851.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bitcoinevents.uk/event/formal-house",
-    "startDate": "2024-07-30T00:00",
-    "endDate": "2024-07-30T23:59",
+    "url": "\"\"",
+    "startDate": "2024-07-30",
+    "endDate": "2024-07-30",
     "location": {
       "name": "Formal House",
       "description": "",
       "url": "",
       "address": {
         "streetAddress": "60 Saint George's Place",
-        "addressLocality": "Cheltonham",
-        "addressRegion": "",
+        "addressLocality": "Cheltenham",
+        "addressRegion": "\"\"",
         "postalCode": "GL50 3PN",
-        "addressCountry": ""
+        "addressCountry": "\"United Kingdom\""
       },
       "geo": {
         "latitude": 0,
         "longitude": 0
       },
-      "telephone": ""
+      "telephone": "\"\""
     }
   },
   {
-    "name": "The Millers Arms",
-    "description": "The next Canterbury Bitcoin meetup is taking place on:",
+    "name": "Millers Arms",
+    "description": "The next Canterbury Bitcoin meetup is taking place on Tuesday 30th July from 19:00 to 21:00 at The Millers Arms, 2 Mill Lane, Canterbury, CT1 2AW.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/06/logo-bitcoin-512-e1719514063960.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bitcoinevents.uk/event/the-millers-arms",
+    "url": "https://bitcoinevents.uk/event/millers-arms",
     "startDate": "2024-07-30T19:00",
     "endDate": "2024-07-30T21:00",
     "location": {
@@ -176,11 +176,11 @@
   },
   {
     "name": "The White Horse",
-    "description": "Bitcoin meetup on the last Tuesday of the month. 19:00 in Leamington Spa, Warwickshire.",
+    "description": "A popular venue for social gatherings and events.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/06/img_2870-e1711271849172.jpg?fit=300%2C300&ssl=1",
-    "url": "https://bitcoinevents.uk/event/the-white-horse",
+    "url": "\"\"",
     "startDate": "2024-07-30T19:00",
-    "endDate": "2024-07-30T22:00",
+    "endDate": "2024-07-30T21:00",
     "location": {
       "name": "The White Horse",
       "description": "",
@@ -188,7 +188,7 @@
       "address": {
         "streetAddress": "4-6 Clarendon Ave",
         "addressLocality": "Leamington Spa",
-        "addressRegion": "",
+        "addressRegion": "Warwickshire",
         "postalCode": "CV32 5PZ",
         "addressCountry": "United Kingdom"
       },
@@ -196,7 +196,7 @@
         "latitude": 0,
         "longitude": 0
       },
-      "telephone": ""
+      "telephone": "\"\""
     }
   },
   {
@@ -229,8 +229,8 @@
     "description": "Building a bitcoin community in the Brighton & Hove area. A regular informal meetup happens every Last Wednesday of the month. More activities to be announced in the coming months.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/09/img_3540-e1710665517549.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/caxton-arms",
-    "startDate": "2024-07-31T14:00",
-    "endDate": "2024-07-31T17:00",
+    "startDate": "2024-07-31T00:00",
+    "endDate": "2024-07-31T23:59",
     "location": {
       "name": "Caxton Arms",
       "description": "",
@@ -251,11 +251,11 @@
   },
   {
     "name": "Treaty of Commerce",
-    "description": "Lincolnshire Bitcoin meets on the first Thursday of each month at 7:30 PM in the Treaty of Commerce, Lincoln, LN5 7AF.",
+    "description": "A local pub known for hosting various community events.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2024/04/img_8359-1-e1712690481714.jpg?fit=300%2C300&ssl=1",
     "url": "https://www1.camra.org.uk/pubs/treaty-of-commerce-lincoln-191763",
     "startDate": "2024-08-01T19:30",
-    "endDate": "2024-08-01",
+    "endDate": "2024-08-01T22:00",
     "location": {
       "name": "Treaty of Commerce",
       "description": "",
@@ -276,11 +276,11 @@
   },
   {
     "name": "Arthur’s Seat",
-    "description": "A prominent hill in Edinburgh, known for its remarkable views and historical significance as a site of ancient forts.",
+    "description": "Every Saturday, join the Bitcoin Walk in Edinburgh for a trek around Arthur’s Seat and discuss Bitcoin.",
     "image": "https://i0.wp.com/bitcoinevents.uk/wp-content/uploads/2022/08/img_3490-e1710667635321.jpg?fit=300%2C300&ssl=1",
     "url": "https://bitcoinevents.uk/event/arthur’s-seat",
     "startDate": "2024-08-03T12:00",
-    "endDate": "2024-08-03T14:00",
+    "endDate": "2024-08-03",
     "location": {
       "name": "Arthur’s Seat",
       "description": "",
@@ -289,7 +289,7 @@
         "streetAddress": "",
         "addressLocality": "Edinburgh",
         "addressRegion": "",
-        "postalCode": "EH153PY",
+        "postalCode": "EH8 9YL",
         "addressCountry": "United Kingdom"
       },
       "geo": {
