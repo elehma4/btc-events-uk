@@ -16,7 +16,7 @@ export async function completeEventDetails(event: BitcoinerEventDto): Promise<Bi
   await delay(2000); // 2-second delay to avoid rate limits
 
   const prompt = `
-  Given the following event details, fill in any missing information. Ensure no important details are lost. If any information is incorrect or nonsensical, set the value to an empty string. Use the specific URL format 'bitcoinevents.uk/event/[event-name]' for the event URL. Do not use Google URLs.
+  Given the following event details, fill in any missing information. Ensure no important details are lost. If any information is incorrect or nonsensical, set the value to an empty string. Use the specific URL format 'bitcoinevents.uk/event/[event-name]' for the event URL. Do not use Google URLs. A good date/time object will look like this 2024-07-31T14:00, or 2024-07-31.
 
   Name: ${event.name}
   Description: ${event.description}
