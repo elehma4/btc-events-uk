@@ -1,6 +1,5 @@
 import { scrapeBitcoinEvents } from "./services/scraper";
 import { scrapeEventDetails } from "./services/detailScraper";
-import { completeEventDetails } from "./services/openaiHelper";
 import { cleanEventData } from "./utils/cleanEventData";
 import { log } from "./utils/logger";
 import * as fs from 'fs';
@@ -20,14 +19,9 @@ async function main() {
       events[i] = detailedEvent[0];
       console.log(`Event after Step 2: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
       log(`Step 2: Detailed information scraping completed for event: ${events[i].name}`);
-
-      // Step 3: Use OpenAI API to fill in any missing information
-      events[i] = await completeEventDetails(events[i]);
-      console.log(`Event after Step 3: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
-      log(`Step 3: Completing missing event details using OpenAI API completed for event: ${events[i].name}`);
     }
 
-    // Step 4: Clean up final event data
+    // Step 3: Clean up final event data
     events = cleanEventData(events);
 
     // Save the final result to a JSON file

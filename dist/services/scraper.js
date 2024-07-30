@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.scrapeBitcoinEvents = scrapeBitcoinEvents;
-// src/services/scraper.ts
 const puppeteer_1 = __importDefault(require("puppeteer"));
 async function scrapeBitcoinEvents() {
     const browser = await puppeteer_1.default.launch({ headless: true });
@@ -33,8 +32,8 @@ async function scrapeBitcoinEvents() {
                     addressCountry: ''
                 },
                 geo: {
-                    latitude: 0,
-                    longitude: 0
+                    latitude: '',
+                    longitude: ''
                 },
                 telephone: ''
             };

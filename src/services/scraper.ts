@@ -1,4 +1,3 @@
-// src/services/scraper.ts
 import puppeteer from 'puppeteer';
 import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
 
@@ -32,8 +31,8 @@ export async function scrapeBitcoinEvents(): Promise<BitcoinerEventDto[]> {
           addressCountry: ''
         },
         geo: {
-          latitude: 0,
-          longitude: 0
+          latitude: '',
+          longitude: ''
         },
         telephone: ''
       };

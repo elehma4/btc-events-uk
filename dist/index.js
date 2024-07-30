@@ -25,7 +25,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const scraper_1 = require("./services/scraper");
 const detailScraper_1 = require("./services/detailScraper");
-const openaiHelper_1 = require("./services/openaiHelper");
 const cleanEventData_1 = require("./utils/cleanEventData");
 const logger_1 = require("./utils/logger");
 const fs = __importStar(require("fs"));
@@ -42,12 +41,8 @@ async function main() {
             events[i] = detailedEvent[0];
             console.log(`Event after Step 2: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
             (0, logger_1.log)(`Step 2: Detailed information scraping completed for event: ${events[i].name}`);
-            // Step 3: Use OpenAI API to fill in any missing information
-            events[i] = await (0, openaiHelper_1.completeEventDetails)(events[i]);
-            console.log(`Event after Step 3: ${events[i].name}, Start Date: ${events[i].startDate}, End Date: ${events[i].endDate}`);
-            (0, logger_1.log)(`Step 3: Completing missing event details using OpenAI API completed for event: ${events[i].name}`);
         }
-        // Step 4: Clean up final event data
+        // Step 3: Clean up final event data
         events = (0, cleanEventData_1.cleanEventData)(events);
         // Save the final result to a JSON file
         const outputPath = './events.json';

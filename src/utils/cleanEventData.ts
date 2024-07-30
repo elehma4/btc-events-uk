@@ -1,4 +1,3 @@
-// src/utils/cleanEventData.ts
 import { BitcoinerEventDto } from '../models/BitcoinerEventDto';
 
 export function cleanEventData(events: BitcoinerEventDto[]): BitcoinerEventDto[] {
@@ -29,9 +28,14 @@ export function cleanEventData(events: BitcoinerEventDto[]): BitcoinerEventDto[]
 
 export function stripHtmlTags(str: string): string {
   return str.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, match => {
-    const textArea = document.createElement('textarea');
-    textArea.innerHTML = match;
-    return textArea.value;
+    switch (match) {
+      case '&amp;': return '&';
+      case '&lt;': return '<';
+      case '&gt;': return '>';
+      case '&quot;': return '"';
+      case '&#39;': return "'";
+      default: return match;
+    }
   });
 }
 
