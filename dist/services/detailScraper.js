@@ -22,16 +22,16 @@ async function scrapeEventDetails(events) {
                 const addressRegion = '';
                 const postalCode = document.querySelector('.tribe-postal-code')?.textContent?.trim() || '';
                 const addressCountry = document.querySelector('.tribe-country-name')?.textContent?.trim() || '';
-                let geoLat = 0;
-                let geoLng = 0;
+                let geoLat = '';
+                let geoLng = '';
                 const telephone = '';
                 const iframeSrc = document.querySelector('.tribe-events-venue-map iframe')?.getAttribute('src') || '';
                 const geoMatch = iframeSrc.match(/q=([^&]+)/);
                 if (geoMatch && geoMatch[1]) {
                     const geoParts = geoMatch[1].split(',');
                     if (geoParts.length === 2) {
-                        geoLat = parseFloat(geoParts[0].trim());
-                        geoLng = parseFloat(geoParts[1].trim());
+                        geoLat = geoParts[0].trim();
+                        geoLng = geoParts[1].trim();
                     }
                 }
                 const name = document.querySelector('.tribe-events-single-event-title')?.textContent?.trim() || '';

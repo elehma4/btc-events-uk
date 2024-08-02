@@ -19,8 +19,8 @@ export type BitcoinerEventLocationDto = {
 };
 
 export type BitcoinerEventGeoDto = {
-    latitude: number;
-    longitude: number;
+    latitude: number | string;
+    longitude: number | string;
 };
 
 export type BitcoinerEventAddressDto = {

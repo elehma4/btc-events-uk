@@ -27,9 +27,14 @@ function cleanEventData(events) {
 }
 function stripHtmlTags(str) {
     return str.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, match => {
-        const textArea = document.createElement('textarea');
-        textArea.innerHTML = match;
-        return textArea.value;
+        switch (match) {
+            case '&amp;': return '&';
+            case '&lt;': return '<';
+            case '&gt;': return '>';
+            case '&quot;': return '"';
+            case '&#39;': return "'";
+            default: return match;
+        }
     });
 }
 function isValidDate(dateStr) {

@@ -32,8 +32,8 @@ export async function scrapeBitcoinEvents(): Promise<BitcoinerEventDto[]> {
           addressCountry: ''
         },
         geo: {
-          latitude: 0,
-          longitude: 0
+          latitude: '',
+          longitude: ''
         },
         telephone: ''
       };

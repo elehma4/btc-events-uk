@@ -33,8 +33,8 @@ async function scrapeBitcoinEvents() {
                     addressCountry: ''
                 },
                 geo: {
-                    latitude: 0,
-                    longitude: 0
+                    latitude: '',
+                    longitude: ''
                 },
                 telephone: ''
             };
